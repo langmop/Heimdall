@@ -1,10 +1,15 @@
-import SignOut from '@/components/auth/sign_out'
-import React from 'react'
+import UserData from "@/components/auth/user_data";
+import React from "react";
 
-const Layout = () => {
+const Layout = ({ children }) => {
   return (
-    <div><SignOut /></div>
-  )
-}
+    <div>
+      <header>
+        <UserData />
+      </header>
+      {children}
+    </div>
+  );
+};
 
-export default Layout
+export default Layout;
