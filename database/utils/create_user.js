@@ -1,3 +1,4 @@
+import { platforms } from "@/constants/platform";
 import pb from "../connection";
 
 export async function createUser(profile) {
@@ -12,6 +13,11 @@ export async function createUser(profile) {
         name,
         username,
         avatar: picture,
+        platforms: {
+          [platforms.codechef]: "",
+          [platforms.codeforces]: "",
+          [platforms.leetcode]: "",
+        },
       });
     }
   } catch (err) {
